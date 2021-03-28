@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes_\Account.cs" />
+    <Compile Include="Classes_\CheckingAccount.cs" />
+    <Compile Include="Classes_\SavingsAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

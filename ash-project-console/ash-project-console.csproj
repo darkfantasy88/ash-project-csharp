@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ash-project-csharp\ash-project-lib.csproj">
+      <Project>{0F813E1C-7285-439F-80CB-B877F081FA2F}</Project>
+      <Name>ash-project-lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
