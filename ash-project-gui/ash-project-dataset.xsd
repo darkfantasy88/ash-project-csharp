@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ash-project-dataset" targetNamespace="http://tempuri.org/ash-project-dataset.xsd" xmlns:mstns="http://tempuri.org/ash-project-dataset.xsd" xmlns="http://tempuri.org/ash-project-dataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ash-project-dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="_ash_project_dataset" msprop:Generator_UserDSName="ash-project-dataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CxTbl" msprop:Generator_TableClassName="CxTblDataTable" msprop:Generator_TableVarName="tableCxTbl" msprop:Generator_TablePropName="CxTbl" msprop:Generator_RowDeletingName="CxTblRowDeleting" msprop:Generator_RowChangingName="CxTblRowChanging" msprop:Generator_RowEvHandlerName="CxTblRowChangeEventHandler" msprop:Generator_RowDeletedName="CxTblRowDeleted" msprop:Generator_UserTableName="CxTbl" msprop:Generator_RowChangedName="CxTblRowChanged" msprop:Generator_RowEvArgName="CxTblRowChangeEvent" msprop:Generator_RowClassName="CxTblRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

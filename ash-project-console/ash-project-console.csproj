@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{415C929E-C5C8-405D-B744-BFCA5E9E2899}</ProjectGuid>
+    <ProjectGuid>{F45782D9-81D1-479F-8CCF-C6E7B6146F28}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ash_project_console</RootNamespace>
     <AssemblyName>ash-project-console</AssemblyName>

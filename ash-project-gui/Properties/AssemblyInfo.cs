@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ash-project-console")]
+[assembly: AssemblyTitle("ash-project-gui")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ash-project-console")]
+[assembly: AssemblyProduct("ash-project-gui")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f45782d9-81d1-479f-8ccf-c6e7b6146f28")]
+[assembly: Guid("ed0211f2-fb63-4dda-a7e4-01331b632634")]
 
 // Version information for an assembly consists of the following four values:
 //
