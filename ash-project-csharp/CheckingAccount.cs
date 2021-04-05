@@ -48,6 +48,8 @@ namespace ash_project_csharp
                     {
                         overdraft_ = Balance - (_amount + 100);
                         Balance = overdraft_ ;
+                        Data_Helper.DataSetHelper.CxOverdraft(this, overdraft_);
+
                     }
                 }
                 else
@@ -56,6 +58,8 @@ namespace ash_project_csharp
 
                 }
             }
+
+            Data_Helper.DataSetHelper.CxWithdrawl(this, _amount);
 
             
         }

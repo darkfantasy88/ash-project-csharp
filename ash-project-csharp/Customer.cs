@@ -31,10 +31,7 @@ namespace ash_project_csharp
 
         public string TRN { get => TRN_; set { TRN_ = value; } }
 
-        public DateTime DateCreated
-        {
-            get; set;
-        }
+       
        
         public Customer()
         {

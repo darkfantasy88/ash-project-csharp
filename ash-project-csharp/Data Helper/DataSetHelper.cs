@@ -21,8 +21,8 @@ namespace ash_project_csharp.Data_Helper
                 Address="10 Woolwich Dr, Vineyard Town",
                 PhoneNo=null,
                 Email="ashjohnson08@gmail.com",
-                TRN="985634217",
-                DateCreated=new DateTime(2020,12,03)
+                TRN="985634217"
+                
             },
             new Customer()
                 {
@@ -33,8 +33,7 @@ namespace ash_project_csharp.Data_Helper
                     LastName = "Cooper",
                     DOB = new DateTime(1999, 08, 08),
                     Email = "rohancooper99@gmail.com",
-                    PhoneNo = "8765546375",
-                    DateCreated=new DateTime(2021,03,03)
+                    PhoneNo = "8765546375"
             },
             new Customer()
                 {   
@@ -45,8 +44,7 @@ namespace ash_project_csharp.Data_Helper
                     LastName = "Wright",
                     DOB = new DateTime(1997, 07, 28),
                     Email = "tw@wrightholdings.com",
-                    PhoneNo = "8763145962",
-                    DateCreated=new DateTime(2021,04,01)
+                    PhoneNo = "8763145962"
                }
         };
 
@@ -59,14 +57,17 @@ namespace ash_project_csharp.Data_Helper
                 Balance=500000.00,
                 HasOverDraft=true,
                 CreditLimit=10000,
-                AccountType="Checking"
+                AccountType="Checking",
+
             },
             new SavingsAccount()
             {
                 CxID=1,
                 AccountNumber="423145",
                 Balance=13500.00,
-                AccountType="Savings"
+                AccountType="Savings",
+                DateCreated=new DateTime(2021,01,23)
+
             },
              new CheckingAccount()
             {
@@ -82,7 +83,8 @@ namespace ash_project_csharp.Data_Helper
                 CxID=3,
                 AccountNumber="547721",
                 Balance=20000.00,
-                AccountType="Savings"
+                AccountType="Savings",
+                DateCreated=new DateTime(2021,04,01)
             }
         };
 
@@ -151,12 +153,28 @@ namespace ash_project_csharp.Data_Helper
                 throw new Exception(ex.Message);
             }
         }
-        public static void InsertCx(Customer cx,Account account)
+        public static void InsertCx(Customer cx)
         {
             try
             {
                 cx.CxID = cxList.Count + 1;
                 cxList.Add(cx);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
+        public static void InsertCx(Customer cx,Account account)
+        {
+            try
+            {
+                //cx.CxID = cxList.Count + 1;
+                //cxList.Add(cx);
                 account.AccountNumber = AccountNoGenerator();
                 account.CxID = cx.CxID;
                 RecordTransaction($"{cx.FirstName} Successfully Created A Account", cx.CxID);
@@ -237,6 +255,20 @@ namespace ash_project_csharp.Data_Helper
             }
         }
 
+        public static Account FindAccount(string actNo_)
+        {
+            try
+            {
+                var act_ = bankActs.Find(x => x.AccountNumber == actNo_);
+
+                return act_;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
         public static List<TransactionLog> FindCxTransactions(Customer cx)
         {
             try
@@ -259,6 +291,53 @@ namespace ash_project_csharp.Data_Helper
             }
         }
 
-        
+        public static void CxWithdrawl(Account account,double amount_)
+        {
+            try
+            {
+                var act_=bankActs.Find(x => x == account);
+
+                RecordTransaction(string.Format("Withdrawl of {0:c} from account {1}", amount_, act_.AccountNumber), act_.CxID);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public static void CxDeposit(Account account, double amount_)
+        {
+            try
+            {
+                var act_ = bankActs.Find(x => x == account);
+
+                RecordTransaction(string.Format("Deposit of {0:c} to account {1}", amount_, act_.AccountNumber), act_.CxID);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public static void CxOverdraft(Account account, double amount_)
+        {
+            try
+            {
+                var act_ = bankActs.Find(x => x == account);
+
+                RecordTransaction(string.Format("Account {0} overdraft is {1} ", act_.AccountNumber,amount_), act_.CxID);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

@@ -42,7 +42,7 @@ namespace ash_project_csharp
             
         }
        
-        public double BalanceEnquiry()
+        public virtual double BalanceEnquiry()
         {
             return _balance;
         }
@@ -58,6 +58,8 @@ namespace ash_project_csharp
         public void Deposit(double _amount)
         {
             _balance += _amount;
+            Data_Helper.DataSetHelper.CxDeposit(this, _amount);
+
         }
     }
 }
